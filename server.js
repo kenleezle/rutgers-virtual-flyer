@@ -85,6 +85,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+// flag
 var User = connection.define('user', {
   firstname: {
     type: Sequelize.STRING,
@@ -147,6 +148,7 @@ var Restaurant = sequelize.define('Restaurants', {
 });
 */
 
+// flag
 var Review = connection.define('review', {
   locationName: {
     type: Sequelize.STRING
@@ -280,6 +282,7 @@ app.post("/saveRating", function(req, res) {
   });
 });
 
+//flag
 //GETS REVIEWS FROM REVIEW TABLE BY ID SENDS TO EDITREVIEW FOR EDITING
 app.get("/edit/:id", function(req, res) {
   //console.log("params id " + req.params.id);
